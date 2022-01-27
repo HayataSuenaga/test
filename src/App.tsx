@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 function App() {
+  const [isGreetingShown, setIsGreetingShown] = useState(false)
   return (
-    <h1>Hello World</h1>
+    <>
+      {isGreetingShown ? 'Hello!' : 'Fuck off'}
+      <button onClick={() => setIsGreetingShown(!isGreetingShown)}>Toggle me</button>
+    </>
   );
 }
 
